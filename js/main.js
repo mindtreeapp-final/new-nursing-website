@@ -1,3 +1,69 @@
+// Hero Banner Carousel
+let currentSlide = 0;
+let currentTextSlide = 0;
+const heroSlides = document.querySelectorAll('.hero-slide');
+const carouselTexts = document.querySelectorAll('.carousel-text');
+
+function nextSlide() {
+    if (heroSlides.length > 0) {
+        heroSlides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        heroSlides[currentSlide].classList.add('active');
+    }
+}
+
+function nextTextSlide() {
+    if (carouselTexts.length > 0) {
+        carouselTexts[currentTextSlide].classList.remove('active');
+        currentTextSlide = (currentTextSlide + 1) % carouselTexts.length;
+        carouselTexts[currentTextSlide].classList.add('active');
+    }
+}
+
+// Auto slide images every 5 seconds
+if (heroSlides.length > 0) {
+    setInterval(nextSlide, 1000);
+}
+
+// Auto slide text every 3 seconds
+if (carouselTexts.length > 0) {
+    setInterval(nextTextSlide, 4000);
+}
+
+// Mobile menu toggle
+const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+const navMenu = document.querySelector('.nav-menu');
+const dropdowns = document.querySelectorAll('.dropdown');
+
+if (mobileMenuIcon) {
+    mobileMenuIcon.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Mobile dropdown functionality
+dropdowns.forEach(dropdown => {
+    const dropbtn = dropdown.querySelector('.dropbtn');
+    if (dropbtn) {
+        dropbtn.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            }
+        });
+    }
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!navMenu.contains(e.target) && !mobileMenuIcon.contains(e.target)) {
+            navMenu.classList.remove('active');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        }
+    }
+});
+
 // Contact button - opens modal
 const contactModal = document.getElementById('contact-modal');
 const contactBtn = document.getElementById('contact-btn');
@@ -197,21 +263,11 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.course-card, .offer-card, .category-card').forEach(el => {
+document.querySelectorAll('.course-card, .offer-card, .category-card, .service-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'all 0.6s ease';
     observer.observe(el);
 });
-
-// Mobile menu toggle (basic implementation)
-const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-const navMenu = document.querySelector('.nav-menu');
-
-if (mobileMenuIcon) {
-    mobileMenuIcon.addEventListener('click', () => {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-    });
-}
 
 console.log('Mindtree Nursing Solutions - Website Loaded Successfully');
