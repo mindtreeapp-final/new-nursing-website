@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mindtree Nursing Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .about-content {
+            padding: 80px 0;
+        }
+        
+        .about-section {
+            margin-bottom: 60px;
+        }
+        
+        .about-section h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .member-image {
+            width: 100%;
+            height: 300px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .member-image i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .member-info {
+            padding: 30px;
+        }
+        
+        .member-info h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .member-info .position {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .member-info p {
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .member-social a {
+            color: var(--primary-color);
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .member-social a:hover {
+            color: var(--dark-blue);
+        }
+        
+        .values-section {
+            padding: 80px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .value-icon i {
+            font-size: 36px;
+            color: var(--white);
+        }
+        
+        .value-card h3 {
+            font-size: 22px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="image\logo 3-1.png" alt="Mindtree Nursing Solutions" id="company-logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">
+                            Courses <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="course-detail.html?course=osce">OSCE</a>
+                            <a href="course-detail.html?course=oet">OET</a>
+                            <a href="course-detail.html?course=iqn">IQN</a>
+                            <a href="course-detail.html?course=prometric">Prometric</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">
+                            App <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://apps.apple.com/your-app" target="_blank">
+                                <i class="fab fa-apple"></i> iOS App
+                            </a>
+                            <a href="https://play.google.com/store/apps/your-app" target="_blank">
+                                <i class="fab fa-google-play"></i> Android App
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="#" id="contact-btn">Contact Us</a></li>
+                    <li><a href="https://zfrmz.in/ItEIDou3OnZligiR3iki" target="_blank" class="btn-primary">Free Book</a></li>
+                </ul>
+                <div class="mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Mindtree Nursing Solutions</h1>
+            <p>Empowering Healthcare Professionals Worldwide</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-section">
+                <h2>About Our Company</h2>
+                <p>
+                    Mindtree Nursing Solutions is a 100% New Zealand-owned company dedicated to helping nurses achieve their dreams of becoming registered in countries like New Zealand, Australia, the Middle East, UK, USA, and Canada. With over 4 years of experience, we provide comprehensive support from documentation to registration, including specialized courses like IQN, NCLEX-RN, and OSCE training.
+                </p>
+            </div>
+            
+            <div class="about-section">
+                <h2>Our Mission</h2>
+                <p>
+                    To empower nurses worldwide by providing seamless support and training for international registration.
+                </p>
+            </div>
+            
+            <div class="about-section">
+                <h2>Our Vision</h2>
+                <p>
+                    To be the leading global partner for nurses aspiring to work in top healthcare systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We maintain the highest standards in education and training, ensuring our students receive top-quality preparation.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Compassion</h3>
+                    <p>We care about each student's success and provide personalized support throughout their learning journey.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously update our teaching methods and materials to reflect the latest industry standards.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We build a supportive community where students can learn from each other and grow together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Directors</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 20px;">
+                Leadership that drives excellence
+            </p>
+            
+            <div class="team-grid" style="max-width: 800px; margin: 0 auto 60px;">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/jeffy-john.jpg" alt="Jeffy John" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user-tie" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Jeffy John</h3>
+                        <p class="position">CEO</p>
+                        <p>Leading Mindtree Nursing Solutions with vision and dedication to transform nursing careers globally.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/melvin-mathew.jpg" alt="Melvin Mathew" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user-graduate" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Melvin Mathew</h3>
+                        <p class="position">Director (Academic & Operations)</p>
+                        <p>Overseeing academic excellence and operational efficiency to ensure the best student experience.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Meet Our Team</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 20px;">
+                The dedicated professionals behind Mindtree Nursing Solutions
+            </p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/joby-john.jpg" alt="Joby John" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Joby John</h3>
+                        <p class="position">Manager (HR & Finance)</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/anju-iype.jpg" alt="Anju Iype" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-chalkboard-teacher" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anju Iype</h3>
+                        <p class="position">Lead Instructor</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/surya-m.jpg" alt="Surya M" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-tools" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Surya M</h3>
+                        <p class="position">Facilities Manager</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/reshma-vr.jpg" alt="Reshma V R" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-file-alt" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Reshma V R</h3>
+                        <p class="position">CGFNS Document Specialist</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/nandan-r-ajay.jpg" alt="Nandan R Ajay" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-laptop-code" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Nandan R Ajay</h3>
+                        <p class="position">Software Developer</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/edbin.jpg" alt="Edbin" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-code" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Edbin</h3>
+                        <p class="position">Software Developer</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/sujith-padmanabhan.jpg" alt="Sujith Padmanabhan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-bullhorn" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sujith Padmanabhan</h3>
+                        <p class="position">Manager (Marketing & Media)</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/rimy-mathew.jpg" alt="Rimy Mathew" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-tasks" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Rimy Mathew</h3>
+                        <p class="position">Operations Executive</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/arya-mohan.jpg" alt="Arya Mohan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user-nurse" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Arya Mohan</h3>
+                        <p class="position">OSCE & Document Specialist</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/sreeja-s.jpg" alt="Sreeja S" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user-shield" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sreeja S</h3>
+                        <p class="position">TL (CGFNS & ICHC)</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/raji-o.jpg" alt="Raji O" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-language" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Raji O</h3>
+                        <p class="position">OET Trainer</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/bincymol-s.jpg" alt="Bincymol S" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user-tie" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Bincymol S</h3>
+                        <p class="position">Executive Assistant</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/reena-babu.jpg" alt="Reena Babu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-certificate" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Reena Babu</h3>
+                        <p class="position">IQN Document Specialist</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/priya-philip.jpg" alt="Priya Philip" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-user-check" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Priya Philip</h3>
+                        <p class="position">TL (IQN)</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/reena-roy.jpg" alt="Reena Roy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-calculator" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Reena Roy</h3>
+                        <p class="position">Accounts</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/rincy.jpg" alt="Rincy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-calculator" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Rincy</h3>
+                        <p class="position">Accounts</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/anuja.jpg" alt="Anuja" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-file-medical" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anuja</h3>
+                        <p class="position">CGFNS Document Specialist</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/anu.jpg" alt="Anu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-book" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anu</h3>
+                        <p class="position">Academic Coordinator</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team/anugraha.jpg" alt="Anugraha" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <i class="fas fa-plane-departure" style="display: none;"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anugraha</h3>
+                        <p class="position">Immigration & Departure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p>India Office</p>
+                        <a href="tel:+919778286707" class="phone-number">+91 9778 286 707</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p>New Zealand Office</p>
+                        <a href="tel:+6421217870" class="phone-number">+64 21 217 87 70</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <p>WhatsApp</p>
+                        <a href="https://wa.me/919778286707" target="_blank" class="phone-number">+91 9778 286 707</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <p>Email us at</p>
+                        <a href="mailto:info@mindtreenursing.com">info@mindtreenursing.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Action Buttons -->
+    <div class="fixed-actions">
+        <a href="https://wa.me/919778286707" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="chatbot-btn" id="chatbot-trigger" title="Chat with us">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <h3>Mindtree Assistant</h3>
+            <button class="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="bot-message">
+                <p>Hello! I'm here to help you with any questions about our nursing courses. How can I assist you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your question...">
+            <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mindtree Nursing Solutions</h3>
+                    <p>Empowering nurses worldwide with quality education and training.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" id="terms-link">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone"></i> IN: +91 9778 286 707</p>
+                    <p><i class="fas fa-phone"></i> NZ: +64 21 217 87 70</p>
+                    <p><i class="fas fa-envelope"></i> info@mindtreenursing.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindtree Nursing Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
