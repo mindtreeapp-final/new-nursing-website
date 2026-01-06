@@ -14,20 +14,96 @@ function nextSlide() {
 
 function nextTextSlide() {
     if (carouselTexts.length > 0) {
+        // Remove active from current
         carouselTexts[currentTextSlide].classList.remove('active');
+        
+        // Move to next
         currentTextSlide = (currentTextSlide + 1) % carouselTexts.length;
-        carouselTexts[currentTextSlide].classList.add('active');
+        
+        // Add active to next after a small delay
+        setTimeout(() => {
+            carouselTexts[currentTextSlide].classList.add('active');
+        }, 100);
     }
 }
 
-// Auto slide images every 5 seconds
+// Auto slide images every 3 seconds
 if (heroSlides.length > 0) {
-    setInterval(nextSlide, 1000);
+    setInterval(nextSlide, 3000);
 }
 
-// Auto slide text every 3 seconds
+// Auto slide text every 4 seconds (1 text visible at a time, holds for 4 seconds)
 if (carouselTexts.length > 0) {
     setInterval(nextTextSlide, 4000);
+}
+
+// Services Carousel
+const servicesTrack = document.getElementById('servicesTrack');
+const serviceCards = document.querySelectorAll('.service-card-large');
+const carouselDots = document.querySelectorAll('.carousel-dot');
+let currentServiceIndex = 0;
+
+function updateActiveService() {
+    serviceCards.forEach((card, index) => {
+        card.classList.remove('active');
+        if (index === currentServiceIndex) {
+            card.classList.add('active');
+        }
+    });
+    
+    carouselDots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === currentServiceIndex) {
+            dot.classList.add('active');
+        }
+    });
+}
+
+if (servicesTrack) {
+    // Handle scroll to update active card
+    servicesTrack.addEventListener('scroll', () => {
+        const scrollPosition = servicesTrack.scrollLeft;
+        const cardWidth = serviceCards[0]?.offsetWidth || 0;
+        const gap = 30;
+        const newIndex = Math.round(scrollPosition / (cardWidth + gap));
+        
+        if (newIndex !== currentServiceIndex && newIndex < serviceCards.length) {
+            currentServiceIndex = newIndex;
+            updateActiveService();
+        }
+    });
+    
+    // Handle dot clicks
+    carouselDots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            const index = parseInt(dot.getAttribute('data-index'));
+            currentServiceIndex = index;
+            const cardWidth = serviceCards[0]?.offsetWidth || 0;
+            const gap = 30;
+            servicesTrack.scrollTo({
+                left: index * (cardWidth + gap),
+                behavior: 'smooth'
+            });
+            updateActiveService();
+        });
+    });
+    
+    // Handle card clicks for mobile
+    serviceCards.forEach((card) => {
+        card.addEventListener('click', () => {
+            const index = parseInt(card.getAttribute('data-index'));
+            if (index !== currentServiceIndex) {
+                currentServiceIndex = index;
+                const cardWidth = card.offsetWidth;
+                const gap = 30;
+                servicesTrack.scrollTo({
+                    left: index * (cardWidth + gap),
+                    behavior: 'smooth'
+                });
+                updateActiveService();
+            }
+        });
+    });
 }
 
 // Mobile menu toggle

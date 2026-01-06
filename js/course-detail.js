@@ -198,9 +198,9 @@ const courseData = {
             }
         ]
     },
-    therapeutic: {
-        title: 'Therapeutic Communication',
-        subtitle: 'Personalised Communication Course for Nurses',
+    prometric: {
+        title: 'Prometric Exam Preparation',
+        subtitle: 'Professional Nursing License Examination',
         description: `
             <p>The Prometric examination is a computer-based test required for nursing licensure in many countries, particularly in the Middle East. Our comprehensive preparation course covers all aspects of nursing knowledge and practice required to pass this challenging examination.</p>
             <p>With extensive question banks, practice tests, and expert instruction, we ensure you're thoroughly prepared for every topic covered in the Prometric exam.</p>
@@ -260,6 +260,138 @@ const courseData = {
                     'Topic-wise assessments',
                     'Time management practice',
                     'Performance analysis'
+                ]
+            }
+        ]
+    },
+    therapeutic: {
+        title: 'Therapeutic Communication Course',
+        subtitle: 'Professional Communication Skills for Healthcare',
+        description: `
+            <p>Our Therapeutic Communication course is designed to help healthcare professionals develop effective communication skills essential for patient care. This comprehensive program covers verbal and non-verbal communication techniques, active listening, empathy, and building therapeutic relationships with patients.</p>
+            <p>With experienced instructors and practical scenarios, you'll learn how to communicate effectively in various healthcare settings, handle difficult conversations, and provide patient-centered care.</p>
+        `,
+        learningOutcomes: [
+            'Master therapeutic communication techniques',
+            'Develop active listening and empathy skills',
+            'Handle difficult conversations professionally',
+            'Build rapport with patients and families',
+            'Understand cultural sensitivity in communication',
+            'Practice effective non-verbal communication',
+            'Learn conflict resolution strategies'
+        ],
+        targetAudience: `
+            <p>This course is ideal for nurses and healthcare professionals who want to enhance their communication skills and provide better patient care. Whether you're a new graduate or an experienced professional, this course will strengthen your ability to connect with patients effectively.</p>
+        `,
+        duration: '2-3 Months',
+        students: '250+',
+        successRate: '97%',
+        price: '₹30,000',
+        modules: [
+            {
+                number: 1,
+                title: 'Communication Fundamentals',
+                topics: [
+                    'Verbal communication techniques',
+                    'Non-verbal communication',
+                    'Active listening skills',
+                    'Empathy and compassion'
+                ]
+            },
+            {
+                number: 2,
+                title: 'Patient Interaction',
+                topics: [
+                    'Building therapeutic relationships',
+                    'Patient-centered communication',
+                    'Cultural competence',
+                    'Family communication'
+                ]
+            },
+            {
+                number: 3,
+                title: 'Difficult Conversations',
+                topics: [
+                    'Breaking bad news',
+                    'Handling angry patients',
+                    'Conflict resolution',
+                    'Dealing with emotional situations'
+                ]
+            },
+            {
+                number: 4,
+                title: 'Practical Application',
+                topics: [
+                    'Role-play scenarios',
+                    'Case studies',
+                    'Real-world practice',
+                    'Feedback and improvement'
+                ]
+            }
+        ]
+    },
+    interview: {
+        title: 'Interview Preparation & Job Training',
+        subtitle: 'Professional Interview Skills for Nursing Careers',
+        description: `
+            <p>Our Interview Preparation and Job Training course prepares nurses for successful job interviews in international healthcare settings. This comprehensive program covers interview techniques, professional presentation, common interview questions, and strategies to showcase your skills and experience effectively.</p>
+            <p>With mock interviews, personalized feedback, and expert guidance, you'll gain the confidence and skills needed to excel in nursing job interviews and secure your dream position.</p>
+        `,
+        learningOutcomes: [
+            'Master common nursing interview questions',
+            'Develop professional presentation skills',
+            'Create compelling responses using STAR method',
+            'Understand cultural expectations in interviews',
+            'Build confidence through mock interviews',
+            'Learn salary negotiation techniques',
+            'Prepare for video and phone interviews'
+        ],
+        targetAudience: `
+            <p>This course is perfect for nurses preparing for job interviews in countries like New Zealand, Australia, UK, USA, Canada, and the Middle East. Whether you're applying for your first international position or advancing your nursing career, this training will give you a competitive edge.</p>
+        `,
+        duration: '1-2 Months',
+        students: '350+',
+        successRate: '96%',
+        price: '₹25,000',
+        modules: [
+            {
+                number: 1,
+                title: 'Interview Fundamentals',
+                topics: [
+                    'Types of nursing interviews',
+                    'Professional dress code',
+                    'Body language and etiquette',
+                    'First impressions'
+                ]
+            },
+            {
+                number: 2,
+                title: 'Common Interview Questions',
+                topics: [
+                    'Clinical scenario questions',
+                    'Behavioral questions',
+                    'Situational questions',
+                    'STAR method responses'
+                ]
+            },
+            {
+                number: 3,
+                title: 'Mock Interviews',
+                topics: [
+                    'Practice interviews',
+                    'Personalized feedback',
+                    'Video interview techniques',
+                    'Phone interview skills'
+                ]
+            },
+            {
+                number: 4,
+                title: 'Job Search Strategy',
+                topics: [
+                    'Resume optimization',
+                    'Cover letter writing',
+                    'Salary negotiation',
+                    'Follow-up techniques'
                 ]
             }
         ]
