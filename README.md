@@ -16,7 +16,10 @@ mindtree-nursing/
 │   └── course-detail.js   # Course page specific JavaScript
 ├── images/
 │   ├── logo.png           # Your company logo (ADD THIS)
-│   ├── banner/            # Banner images
+│   ├── banner/            # Banner carousel images (ADD THESE)
+│   │   ├── banner1.jpg
+│   │   ├── banner2.jpg
+│   │   └── banner3.jpg
 │   ├── offers/            # Offer images (ADD THESE)
 │   │   ├── offer1.jpg
 │   │   └── offer2.jpg
@@ -75,13 +78,14 @@ mindtree-nursing/
 ### Step 5: Add Images
 1. Create the `images` folder structure
 2. Add your company logo as `logo.png` in the `images` folder
-3. Add offer images (offer1.jpg, offer2.jpg) in `images/offers/`
-4. **Add team member photos** in `images/team/` folder:
+3. **Add hero banner carousel images** (banner1.jpg, banner2.jpg, banner3.jpg) in `images/banner/`
+4. Add offer images (offer1.jpg, offer2.jpg) in `images/offers/`
+5. **Add team member photos** in `images/team/` folder:
    - **Directors:** jeffy-john.jpg, melvin-mathew.jpg
    - **Team Members:** joby-john.jpg, anju-iype.jpg, surya-m.jpg, reshma-vr.jpg, nandan-r-ajay.jpg, edbin.jpg, sujith-padmanabhan.jpg, rimy-mathew.jpg, arya-mohan.jpg, sreeja-s.jpg, raji-o.jpg, bincymol-s.jpg, reena-babu.jpg, priya-philip.jpg, reena-roy.jpg, rincy.jpg, anuja.jpg, anu.jpg, anugraha.jpg
    - **Image specs:** 400x400 pixels (square), JPG format, professional headshots
    - **Note:** If images are missing, fallback icons will display automatically
-5. You can use placeholder images initially from https://placeholder.com/ or https://unsplash.com/
+6. You can use placeholder images initially from https://placeholder.com/ or https://unsplash.com/
 
 ### Step 6: Run the Website
 1. Right-click on `index.html` in VSCode
@@ -154,6 +158,26 @@ Search for `1800-120-456-456` in all files and replace with your number.
 1. Find the App dropdown section in navigation
 2. Replace iOS link: `https://apps.apple.com/your-app`
 3. Replace Android link: `https://play.google.com/store/apps/your-app`
+
+### Add Hero Banner Images
+1. **Image Requirements:**
+   - Size: 1920x600 pixels (wide format)
+   - Format: JPG
+   - Style: High-quality, professional nursing/healthcare images
+   - Brightness: Not too dark (text appears over them)
+
+2. **File Naming:**
+   - banner1.jpg
+   - banner2.jpg
+   - banner3.jpg
+
+3. **Place in:** `images/banner/` folder
+
+4. **Image Suggestions:**
+   - Nurses in professional settings
+   - Hospital/clinic environments
+   - International nursing themes
+   - New Zealand landscapes with healthcare
 
 ### Add Offer Images
 1. Create images sized 600x400 pixels
