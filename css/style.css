@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -143,7 +143,7 @@ body {
 
 /* Hero Banner */
 .hero-banner {
-    background: linear-gradient(135deg, #5a5af1 0%, #1490e2 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: var(--white);
     padding: 60px 0 40px;
     position: relative;
@@ -308,7 +308,38 @@ body {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 80px;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.carousel-arrow:hover {
+    background: var(--dark-blue);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+.carousel-arrow-left {
+    left: 10px;
+}
+
+.carousel-arrow-right {
+    right: 10px;
 }
 
 .services-track {
@@ -1072,6 +1103,24 @@ body {
     
     .services-section {
         padding: 50px 0;
+    }
+    
+    .services-carousel {
+        padding: 0 50px;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .carousel-arrow-left {
+        left: 5px;
+    }
+    
+    .carousel-arrow-right {
+        right: 5px;
     }
     
     .services-track {

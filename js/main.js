@@ -41,6 +41,8 @@ if (carouselTexts.length > 0) {
 const servicesTrack = document.getElementById('servicesTrack');
 const serviceCards = document.querySelectorAll('.service-card-large');
 const carouselDots = document.querySelectorAll('.carousel-dot');
+const servicesPrevBtn = document.getElementById('servicesPrev');
+const servicesNextBtn = document.getElementById('servicesNext');
 let currentServiceIndex = 0;
 
 function updateActiveService() {
@@ -59,12 +61,41 @@ function updateActiveService() {
     });
 }
 
+function scrollToService(index) {
+    if (servicesTrack && serviceCards[index]) {
+        const cardWidth = serviceCards[index].offsetWidth;
+        const gap = 40;
+        servicesTrack.scrollTo({
+            left: index * (cardWidth + gap),
+            behavior: 'smooth'
+        });
+        currentServiceIndex = index;
+        updateActiveService();
+    }
+}
+
+// Previous button
+if (servicesPrevBtn) {
+    servicesPrevBtn.addEventListener('click', () => {
+        const newIndex = currentServiceIndex > 0 ? currentServiceIndex - 1 : serviceCards.length - 1;
+        scrollToService(newIndex);
+    });
+}
+
+// Next button
+if (servicesNextBtn) {
+    servicesNextBtn.addEventListener('click', () => {
+        const newIndex = currentServiceIndex < serviceCards.length - 1 ? currentServiceIndex + 1 : 0;
+        scrollToService(newIndex);
+    });
+}
+
 if (servicesTrack) {
     // Handle scroll to update active card
     servicesTrack.addEventListener('scroll', () => {
         const scrollPosition = servicesTrack.scrollLeft;
         const cardWidth = serviceCards[0]?.offsetWidth || 0;
-        const gap = 30;
+        const gap = 40;
         const newIndex = Math.round(scrollPosition / (cardWidth + gap));
         
         if (newIndex !== currentServiceIndex && newIndex < serviceCards.length) {
@@ -77,14 +108,7 @@ if (servicesTrack) {
     carouselDots.forEach((dot) => {
         dot.addEventListener('click', () => {
             const index = parseInt(dot.getAttribute('data-index'));
-            currentServiceIndex = index;
-            const cardWidth = serviceCards[0]?.offsetWidth || 0;
-            const gap = 30;
-            servicesTrack.scrollTo({
-                left: index * (cardWidth + gap),
-                behavior: 'smooth'
-            });
-            updateActiveService();
+            scrollToService(index);
         });
     });
     
@@ -93,14 +117,7 @@ if (servicesTrack) {
         card.addEventListener('click', () => {
             const index = parseInt(card.getAttribute('data-index'));
             if (index !== currentServiceIndex) {
-                currentServiceIndex = index;
-                const cardWidth = card.offsetWidth;
-                const gap = 30;
-                servicesTrack.scrollTo({
-                    left: index * (cardWidth + gap),
-                    behavior: 'smooth'
-                });
-                updateActiveService();
+                scrollToService(index);
             }
         });
     });
