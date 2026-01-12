@@ -242,17 +242,39 @@ body {
     visibility: visible;
 }
 
+/* ============================================
+   ACHIEVEMENT BADGES SECTION
+   ============================================ */
+.achievement-badges-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
 .achievement-badge {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 20px 30px;
-    border-radius: 15px;
-    margin: 20px 0;
+    padding: 25px 35px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.achievement-badge:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .badge-number {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 800;
     color: #ffd700;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
@@ -262,15 +284,23 @@ body {
 }
 
 .achievement-badge p {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     line-height: 1.4;
+    text-align: center;
+    color: var(--white);
+}
+
+.enroll-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 .btn-enroll {
     background: var(--white);
     color: #ff6b35;
-    padding: 12px 35px;
+    padding: 14px 40px;
     border: none;
     border-radius: 30px;
     font-size: 18px;
@@ -280,14 +310,12 @@ body {
     box-shadow: var(--shadow-lg);
     text-decoration: none;
     display: inline-block;
-    margin-top: 15px;
 }
 
 .btn-enroll:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
-
 /* Services Section */
 .services-section {
     padding: 80px 0;
@@ -1230,5 +1258,94 @@ body {
         width: 50px;
         height: 50px;
         font-size: 24px;
+    }
+}
+
+.whatsapp-btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #dc2626;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(220, 38, 38, 0.6);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+        transform: scale(1);
+    }
+}
+
+
+/* Footer Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    background-color: #1f2933; /* dark footer tone */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: #00bfa6; /* Mindtree accent color */
+    transform: translateY(-4px);
+}
+
+/* Individual brand hover colors (optional but professional) */
+.social-icons a:hover .fa-instagram {
+    color: #e4405f;
+}
+
+.social-icons a:hover .fa-facebook-f {
+    color: #1877f2;
+}
+
+.social-icons a:hover .fa-youtube {
+    color: #ff0000;
+}
+
+.social-icons a:hover .fa-linkedin-in {
+    color: #0a66c2;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center;
     }
 }
