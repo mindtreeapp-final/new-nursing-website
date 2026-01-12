@@ -1,0 +1,646 @@
+/* Course Hero Section */
+.course-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0 80px;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.course-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.course-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item i {
+    font-size: 24px;
+    color: #ffd700;
+}
+
+.stat-item span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-enroll-hero {
+    display: inline-block;
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-enroll-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Course Hero Backgrounds */
+.oet-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/courses/oet-hero.jpg');
+}
+
+.iqn-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/courses/iqn-hero.jpg');
+}
+
+.osce-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/courses/osce-hero.jpg');
+}
+
+.therapeutic-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/courses/therapeutic-hero.jpg');
+}
+
+.interview-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/courses/interview-hero.jpg');
+}
+
+/* Course Content Section */
+.course-content {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.course-content h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.course-content h3 {
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.course-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.learning-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.learning-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 12px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.learning-list li i {
+    color: var(--secondary-color);
+    font-size: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   TESTIMONIALS/REVIEWS CAROUSEL SECTION
+   ============================================ */
+.testimonials-section {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reviews-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 10px 40px 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.reviews-track::-webkit-scrollbar {
+    display: none;
+}
+
+.review-card {
+    flex: 0 0 calc(50% - 15px);
+    min-width: 400px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    scroll-snap-align: start;
+}
+
+.review-card:not(.active) {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+.review-card.active {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.review-info h4 {
+    color: var(--primary-color);
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.review-info p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 0;
+}
+
+.rating {
+    color: #ffd700;
+    margin-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin: 0;
+    font-style: italic;
+}
+
+/* ============================================
+   VIDEO REVIEWS SECTION
+   ============================================ */
+.video-reviews-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.videos-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.videos-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 10px 40px 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.videos-track::-webkit-scrollbar {
+    display: none;
+}
+
+.video-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    scroll-snap-align: start;
+}
+
+.video-card:not(.active) {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+.video-card.active {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%; /* 9:16 aspect ratio for YouTube Shorts */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ============================================
+   CAROUSEL NAVIGATION - ARROWS & DOTS
+   ============================================ */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow:hover {
+    background: var(--dark-blue);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-arrow-left {
+    left: 15px;
+}
+
+.carousel-arrow-right {
+    right: 15px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.carousel-dot:hover {
+    background: #9ca3af;
+}
+
+.carousel-dot.active {
+    background: var(--primary-color);
+    width: 25px;
+    border-radius: 5px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .reviews-carousel,
+    .videos-carousel {
+        padding: 0 60px;
+    }
+    
+    .carousel-arrow-left {
+        left: 10px;
+    }
+    
+    .carousel-arrow-right {
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-hero {
+        padding: 80px 0 60px;
+        min-height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .hero-stats {
+        gap: 15px;
+    }
+    
+    .stat-item {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .course-content {
+        padding: 50px 0;
+    }
+    
+    .course-content h2 {
+        font-size: 28px;
+    }
+    
+    .course-content h3 {
+        font-size: 22px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .reviews-carousel,
+    .videos-carousel {
+        padding: 0 50px;
+    }
+    
+    .review-card {
+        flex: 0 0 calc(90vw - 20px);
+        min-width: calc(90vw - 20px);
+        padding: 20px;
+    }
+    
+    .video-card {
+        flex: 0 0 240px;
+        min-width: 240px;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .carousel-arrow-left {
+        left: 5px;
+    }
+    
+    .carousel-arrow-right {
+        right: 5px;
+    }
+    
+    .carousel-dots {
+        margin-top: 20px;
+        gap: 8px;
+    }
+    
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .carousel-dot.active {
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-hero {
+        padding: 60px 0 40px;
+        min-height: 300px;
+    }
+    
+    .hero-content h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .stat-item i {
+        font-size: 18px;
+    }
+    
+    .btn-enroll-hero {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    .course-content {
+        padding: 30px 0;
+    }
+    
+    .course-content h2 {
+        font-size: 22px;
+    }
+    
+    .course-content h3 {
+        font-size: 18px;
+        margin-top: 25px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .reviews-carousel,
+    .videos-carousel {
+        padding: 0 30px;
+    }
+    
+    .review-card {
+        flex: 0 0 calc(95vw - 40px);
+        min-width: calc(95vw - 40px);
+        padding: 15px;
+    }
+    
+    .review-header {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .review-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .review-info h4 {
+        font-size: 16px;
+    }
+    
+    .review-info p {
+        font-size: 13px;
+    }
+    
+    .review-text {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .rating {
+        font-size: 14px;
+    }
+    
+    .video-card {
+        flex: 0 0 calc(85vw - 20px);
+        min-width: calc(85vw - 20px);
+    }
+    
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .carousel-arrow-left {
+        left: 0;
+    }
+    
+    .carousel-arrow-right {
+        right: 0;
+    }
+    
+    .carousel-dots {
+        margin-top: 15px;
+        gap: 6px;
+    }
+    
+    .carousel-dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .carousel-dot.active {
+        width: 18px;
+    }
+}

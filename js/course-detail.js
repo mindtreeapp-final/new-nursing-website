@@ -5,7 +5,7 @@ const courseData = {
         subtitle: 'Objective Structured Clinical Examination Training',
         description: `
             <p>Our OSCE (Objective Structured Clinical Examination) preparation course is designed to help nursing professionals excel in their clinical assessment examinations. This comprehensive program covers all aspects of clinical skills evaluation, patient interaction, and practical nursing competencies required for international nursing practice.</p>
-            <p>With experienced instructors who have international nursing backgrounds, you'll receive hands-on training with realistic clinical scenarios, standardized patient interactions, and detailed feedback to enhance your performance.</p>
+            <p>With experienced instructors who have international nursing backgrounds, you'll receive hands-on training with realistic clinical scenarios, Personalised APP for easy learning, standardized patient interactions, and detailed feedback to enhance your performance.</p>
         `,
         learningOutcomes: [
             'Master clinical assessment techniques and procedures',
@@ -14,15 +14,16 @@ const courseData = {
             'Learn proper documentation and reporting protocols',
             'Understand cultural competency in healthcare settings',
             'Build confidence for exam day through mock examinations',
-            'Receive personalized feedback from expert assessors'
+            'Receive personalized feedback from expert assessors',
+            'Personalised App & 24x7 simulation lab access'
         ],
         targetAudience: `
-            <p>This course is ideal for registered nurses planning to practice in countries like the UK, Australia, New Zealand, or other nations that require OSCE assessment. Whether you're a new graduate or an experienced nurse looking to work internationally, this program will prepare you for success.</p>
+            <p>This course is ideal for registered nurses planning to practice in countries like the UK, Australia, New Zealand, or other nations that require OSCE assessment. Whether you're an experienced nurse looking to work internationally, this program will prepare you for success.</p>
         `,
-        duration: '3-6 Months',
-        students: '300+',
+        duration: '2 Week',
+        students: '3000+',
         successRate: '96%',
-        price: '₹45,000',
+        price: '₹40,000',
         modules: [
             {
                 number: 1,
@@ -40,7 +41,7 @@ const courseData = {
                 topics: [
                     'Therapeutic communication',
                     'Patient education',
-                    'Breaking bad news',
+                    'App access',
                     'Cultural sensitivity'
                 ]
             },
