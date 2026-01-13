@@ -3,7 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Details - Mindtree Nursing Solutions</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mindtree Nursing Solutions - Professional nursing courses for OET, IQN, OSCE, Therapeutic Communication and Interview Preparation. New Zealand registration made simple.">
+    <meta name="keywords" content="nursing courses, OET training, IQN certification, OSCE preparation, nursing registration, New Zealand nursing, Australia nursing, therapeutic communication, interview preparation">
+    <meta name="author" content="Mindtree Nursing Solutions">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Course Details - Mindtree Nursing Solutions">
+    <meta property="og:description" content="Professional nursing education and training for international registration. Expert courses in OET, IQN, OSCE and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mindtreenursing.com">
+    <meta property="og:image" content="images/logo.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Course Details - Mindtree Nursing Solutions">
+    <meta name="twitter:description" content="Professional nursing education and training for international registration.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <title id="page-title">Course Details - Mindtree Nursing Solutions</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -243,65 +267,112 @@
             padding: 80px 0;
         }
         
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .reviews-carousel,
+        .video-reviews-carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+        
+        .reviews-track,
+        .videos-track {
+            display: flex;
+            gap: 40px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 20px 10px 40px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        
+        .reviews-track::-webkit-scrollbar,
+        .videos-track::-webkit-scrollbar {
+            display: none;
         }
         
         .testimonial-card {
+            flex: 0 0 calc(50% - 20px);
+            min-width: 450px;
             background: var(--white);
             padding: 30px;
             border-radius: 15px;
             box-shadow: var(--shadow-md);
+            transition: all 0.4s ease;
+            scroll-snap-align: start;
         }
         
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
+        .testimonial-card:not(.active) {
+            filter: blur(3px);
+            opacity: 0.5;
+            transform: scale(0.95);
         }
         
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 24px;
+        .testimonial-card.active {
+            filter: blur(0);
+            opacity: 1;
+            transform: scale(1);
         }
         
-        .testimonial-info h4 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
+        .video-card {
+            flex: 0 0 calc(50% - 20px);
+            min-width: 450px;
+            background: transparent;
+            transition: all 0.4s ease;
+            scroll-snap-align: start;
         }
         
-        .testimonial-info p {
-            color: var(--text-light);
-            font-size: 14px;
+        .video-card:not(.active) {
+            filter: blur(3px);
+            opacity: 0.5;
+            transform: scale(0.95);
         }
         
-        .rating {
-            color: #ffd700;
-            margin-bottom: 15px;
+        .video-card.active {
+            filter: blur(0);
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 177.78%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            background: #000;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .video-card h4 {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 18px;
+            color: var(--text-dark);
         }
         
         @media (max-width: 768px) {
-            .course-hero-content {
-                grid-template-columns: 1fr;
+            .reviews-carousel,
+            .video-reviews-carousel {
+                padding: 0 50px;
             }
             
-            .content-grid {
-                grid-template-columns: 1fr;
+            .testimonial-card,
+            .video-card {
+                min-width: 85vw;
             }
             
-            .course-stats {
-                grid-template-columns: 1fr;
+            .video-wrapper {
+                padding-bottom: 177.78%;
             }
         }
     </style>
@@ -324,8 +395,8 @@
                             <a href="course-detail.html?course=oet">OET</a>
                             <a href="course-detail.html?course=iqn">IQN</a>
                             <a href="course-detail.html?course=osce">OSCE</a>
-                            <a href="course-detail.html?course=therapeutic">THERAPEUTIC COMMUNICATION</a>
-                            <a href="course-detail.html?course=interview">INTERVIEW ASSISTANCE</a>
+                            <a href="course-detail.html?course=therapeutic">Therapeutic Communication</a>
+                            <a href="course-detail.html?course=interview">Interview Assistance</a>
                         </div>
                     </li>
                     <li><a href="about.html">About Us</a></li>
@@ -442,69 +513,126 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     <section class="testimonials-section">
         <div class="container">
             <h2 class="section-title">What Our Students Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">
-                            <i class="fas fa-user"></i>
+            
+            <!-- Text Reviews Carousel -->
+            <div class="reviews-carousel">
+                <button class="carousel-arrow carousel-arrow-left" id="reviewsPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrow carousel-arrow-right" id="reviewsNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="reviews-track" id="reviewsTrack">
+                    <div class="testimonial-card active" data-index="0">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Priya Menon</h4>
+                                <p>Registered Nurse, UK</p>
+                            </div>
                         </div>
-                        <div class="testimonial-info">
-                            <h4>Priya Menon</h4>
-                            <p>Registered Nurse, UK</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
+                        <p>"The training was exceptional! The instructors were knowledgeable and the study materials were comprehensive. I passed on my first attempt!"</p>
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    
+                    <div class="testimonial-card" data-index="1">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Rahul Sharma</h4>
+                                <p>Staff Nurse, Australia</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Mindtree Nursing Solutions made my dream of working abroad a reality. The personalized attention and mock tests were invaluable."</p>
                     </div>
-                    <p>"The training was exceptional! The instructors were knowledgeable and the study materials were comprehensive. I passed on my first attempt!"</p>
+                    
+                    <div class="testimonial-card" data-index="2">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Anjali Patel</h4>
+                                <p>Nurse Practitioner, Canada</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Best investment I made in my nursing career. The support didn't end after the course - they continued to guide me through the licensing process."</p>
+                    </div>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">
-                            <i class="fas fa-user"></i>
+                <div class="carousel-dots">
+                    <div class="carousel-dot active" data-index="0"></div>
+                    <div class="carousel-dot" data-index="1"></div>
+                    <div class="carousel-dot" data-index="2"></div>
+                </div>
+            </div>
+            
+            <!-- Video Reviews Section -->
+            <h3 class="section-subtitle" style="margin-top: 60px; margin-bottom: 30px; font-size: 24px; color: var(--text-dark);">Success Stories</h3>
+            <div class="video-reviews-carousel">
+                <button class="carousel-arrow carousel-arrow-left" id="videosPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrow carousel-arrow-right" id="videosNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="videos-track" id="videosTrack">
+                    <div class="video-card active" data-index="0">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" title="Student Success Story 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div class="testimonial-info">
-                            <h4>Rahul Sharma</h4>
-                            <p>Staff Nurse, Australia</p>
+                        <h4>Success Story - Sarah Johnson</h4>
+                    </div>
+                    
+                    <div class="video-card" data-index="1">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="Student Success Story 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
+                        <h4>Success Story - Michael Chen</h4>
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    
+                    <div class="video-card" data-index="2">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="Student Success Story 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h4>Success Story - Emma Williams</h4>
                     </div>
-                    <p>"Mindtree Nursing Solutions made my dream of working abroad a reality. The personalized attention and mock tests were invaluable."</p>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Anjali Patel</h4>
-                            <p>Nurse Practitioner, Canada</p>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Best investment I made in my nursing career. The support didn't end after the course - they continued to guide me through the licensing process."</p>
+                <div class="carousel-dots">
+                    <div class="carousel-dot active" data-index="0"></div>
+                    <div class="carousel-dot" data-index="1"></div>
+                    <div class="carousel-dot" data-index="2"></div>
                 </div>
             </div>
         </div>
@@ -588,8 +716,8 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="https://apps.mindtreenursing.com/">Courses</a></li>
-                        <li><a href="https://wa.me/919778286707">Contact</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact</a></li>
                         <li><a href="#" id="terms-link">Terms & Conditions</a></li>
                     </ul>
                 </div>

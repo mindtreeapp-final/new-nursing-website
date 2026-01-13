@@ -239,13 +239,17 @@ const chatbotResponses = {
     default: "I'm here to help! I can assist you with:\n- Course information\n- Pricing details\n- Enrollment process\n- Contact information\n\nWhat would you like to know?"
 };
 
-chatbotTrigger.addEventListener('click', () => {
-    chatbot.style.display = 'flex';
-});
+if (chatbotTrigger) {
+    chatbotTrigger.addEventListener('click', () => {
+        chatbot.style.display = 'flex';
+    });
+}
 
-chatbotClose.addEventListener('click', () => {
-    chatbot.style.display = 'none';
-});
+if (chatbotClose) {
+    chatbotClose.addEventListener('click', () => {
+        chatbot.style.display = 'none';
+    });
+}
 
 function addMessage(message, isBot = true) {
     const messageDiv = document.createElement('div');
@@ -319,12 +323,17 @@ function sendMessage() {
     }, 500);
 }
 
-chatSend.addEventListener('click', sendMessage);
-chatInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        sendMessage();
-    }
-});
+if (chatSend) {
+    chatSend.addEventListener('click', sendMessage);
+}
+
+if (chatInput) {
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

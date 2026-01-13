@@ -6,46 +6,37 @@ Complete website for Mindtree Nursing Solutions - A professional nursing educati
 
 ```
 mindtree-nursing/
-├── index.html              # Homepage
-├── about.html              # About Us page with team details
-├── course-detail.html      # Dynamic course details page
+├── index.html              # Homepage with SEO
+├── about.html              # About Us page
+├── course-detail.html      # Dynamic course details with testimonials
+├── site.webmanifest        # Web app manifest for favicon
 ├── css/
 │   └── style.css          # Main stylesheet
 ├── js/
 │   ├── main.js            # Main JavaScript functionality
 │   └── course-detail.js   # Course page specific JavaScript
 ├── images/
-│   ├── logo.png           # Your company logo (ADD THIS)
-│   ├── banner/            # Banner carousel images (ADD THESE)
+│   ├── logo.png           # Your company logo
+│   ├── favicon-16x16.png  # Favicon 16x16 (ADD THIS)
+│   ├── favicon-32x32.png  # Favicon 32x32 (ADD THIS)
+│   ├── apple-touch-icon.png # Apple touch icon 180x180 (ADD THIS)
+│   ├── banner/            # Banner carousel images
 │   │   ├── banner1.jpg
 │   │   ├── banner2.jpg
 │   │   └── banner3.jpg
-│   ├── offers/            # Offer images (ADD THESE)
+│   ├── offers/            # Offer images
 │   │   ├── offer1.jpg
 │   │   └── offer2.jpg
-│   ├── courses/           # Course related images
-│   └── team/              # Team member photos (ADD THESE)
+│   ├── courses/           # Course hero images (ADD THESE)
+│   │   ├── osce-hero.jpg
+│   │   ├── oet-hero.jpg
+│   │   ├── iqn-hero.jpg
+│   │   ├── therapeutic-hero.jpg
+│   │   └── interview-hero.jpg
+│   └── team/              # Team member photos
 │       ├── jeffy-john.jpg
 │       ├── melvin-mathew.jpg
-│       ├── joby-john.jpg
-│       ├── anju-iype.jpg
-│       ├── surya-m.jpg
-│       ├── reshma-vr.jpg
-│       ├── nandan-r-ajay.jpg
-│       ├── edbin.jpg
-│       ├── sujith-padmanabhan.jpg
-│       ├── rimy-mathew.jpg
-│       ├── arya-mohan.jpg
-│       ├── sreeja-s.jpg
-│       ├── raji-o.jpg
-│       ├── bincymol-s.jpg
-│       ├── reena-babu.jpg
-│       ├── priya-philip.jpg
-│       ├── reena-roy.jpg
-│       ├── rincy.jpg
-│       ├── anuja.jpg
-│       ├── anu.jpg
-│       └── anugraha.jpg
+│       └── ... (all team photos)
 └── README.md
 ```
 
@@ -77,15 +68,22 @@ mindtree-nursing/
 
 ### Step 5: Add Images
 1. Create the `images` folder structure
-2. Add your company logo as `logo.png` in the `images` folder
-3. **Add hero banner carousel images** (banner1.jpg, banner2.jpg, banner3.jpg) in `images/banner/`
-4. Add offer images (offer1.jpg, offer2.jpg) in `images/offers/`
-5. **Add team member photos** in `images/team/` folder:
-   - **Directors:** jeffy-john.jpg, melvin-mathew.jpg
-   - **Team Members:** joby-john.jpg, anju-iype.jpg, surya-m.jpg, reshma-vr.jpg, nandan-r-ajay.jpg, edbin.jpg, sujith-padmanabhan.jpg, rimy-mathew.jpg, arya-mohan.jpg, sreeja-s.jpg, raji-o.jpg, bincymol-s.jpg, reena-babu.jpg, priya-philip.jpg, reena-roy.jpg, rincy.jpg, anuja.jpg, anu.jpg, anugraha.jpg
-   - **Image specs:** 400x400 pixels (square), JPG format, professional headshots
-   - **Note:** If images are missing, fallback icons will display automatically
-6. You can use placeholder images initially from https://placeholder.com/ or https://unsplash.com/
+2. **Add Favicon images:**
+   - favicon-16x16.png (16x16 pixels)
+   - favicon-32x32.png (32x32 pixels)
+   - apple-touch-icon.png (180x180 pixels)
+   - Use your logo and convert to these sizes using online tools
+3. Add your company logo as `logo.png` in the `images` folder
+4. **Add hero banner carousel images** (banner1.jpg, banner2.jpg, banner3.jpg) in `images/banner/`
+5. **Add course hero images** in `images/courses/`:
+   - osce-hero.jpg (1920x600 pixels)
+   - oet-hero.jpg (1920x600 pixels)
+   - iqn-hero.jpg (1920x600 pixels)
+   - therapeutic-hero.jpg (1920x600 pixels)
+   - interview-hero.jpg (1920x600 pixels)
+6. Add offer images (offer1.jpg, offer2.jpg) in `images/offers/`
+7. **Add team member photos** in `images/team/` folder
+8. You can use placeholder images initially from https://placeholder.com/ or https://unsplash.com/
 
 ### Step 6: Run the Website
 1. Right-click on `index.html` in VSCode
@@ -301,6 +299,116 @@ For issues or questions about this website:
 2. Ensure images are in the right folders
 3. Verify Live Server extension is running
 4. Check browser console for errors (F12)
+
+## 🎥 Adding YouTube Videos to Course Pages
+
+1. **Get YouTube Video IDs:**
+   - Open your YouTube video
+   - Look at the URL: `https://www.youtube.com/watch?v=ABC123XYZ`
+   - The video ID is the part after `v=`: **ABC123XYZ**
+   - For Shorts: `https://www.youtube.com/shorts/ABC123XYZ` - ID is **ABC123XYZ**
+
+2. **Update course-detail.html:**
+   - Find the video section in the HTML
+   - Replace `YOUR_VIDEO_ID_1`, `YOUR_VIDEO_ID_2`, `YOUR_VIDEO_ID_3` with actual IDs
+   - Example: Change `https://www.youtube.com/embed/YOUR_VIDEO_ID_1` 
+     to `https://www.youtube.com/embed/ABC123XYZ`
+
+3. **For YouTube Shorts:**
+   - Shorts work the same way - just use the video ID
+   - The embed will automatically adjust for vertical format
+
+## 🔖 Create Favicon Files
+
+### Option 1: Online Converter (Easiest)
+1. Go to https://favicon.io/favicon-converter/
+2. Upload your logo (PNG format)
+3. Download the generated files
+4. Extract and place in `images/` folder
+
+### Option 2: Manual Creation
+1. Open your logo in image editor (Photoshop, GIMP, etc.)
+2. Create three versions:
+   - 16x16 pixels → save as `favicon-16x16.png`
+   - 32x32 pixels → save as `favicon-32x32.png`
+   - 180x180 pixels → save as `apple-touch-icon.png`
+3. Place all in `images/` folder
+
+## 📱 Create Web Manifest File
+
+Create a file named `site.webmanifest` in the root folder with this content:
+
+```json
+{
+    "name": "Mindtree Nursing Solutions",
+    "short_name": "Mindtree",
+    "icons": [
+        {
+            "src": "/images/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2563eb",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
+```
+
+## 🎯 SEO Features Implemented
+
+### ✅ Meta Tags Added
+- **Title Tags**: Descriptive, keyword-rich titles on all pages
+- **Meta Descriptions**: Unique descriptions for each page
+- **Keywords**: Relevant nursing and education keywords
+- **Robots**: Proper indexing instructions for search engines
+- **Canonical URLs**: Prevent duplicate content issues
+
+### ✅ Open Graph Tags
+- **Facebook sharing**: Optimized preview when shared on Facebook
+- **LinkedIn sharing**: Professional appearance on LinkedIn
+- **Twitter Cards**: Enhanced previews on Twitter
+
+### ✅ Structured Data
+- Proper HTML5 semantic structure
+- Heading hierarchy (H1, H2, H3)
+- Alt text ready for images
+- Descriptive link text
+
+### ✅ Performance
+- Fast loading times
+- Mobile responsive
+- Optimized images (when added)
+
+### 📊 SEO Checklist for Launch
+
+Before going live, complete these steps:
+
+1. **Update URLs in Meta Tags:**
+   - Replace `https://www.mindtreenursing.com` with your actual domain
+   - Update all Open Graph URLs
+
+2. **Add Image Alt Text:**
+   - Add descriptive alt text to all images
+   - Include keywords naturally
+
+3. **Create Sitemap:**
+   - Generate XML sitemap
+   - Submit to Google Search Console
+
+4. **Google Search Console:**
+   - Verify your website
+   - Submit sitemap
+   - Check for crawl errors
+
+5. **Google Analytics:**
+   - Set up tracking code
+   - Configure goals
+
+6. **Page Speed:**
+   - Test with Google PageSpeed Insights
+   - Optimize images
+   - Enable compression
 
 ## 🎯 Next Steps
 

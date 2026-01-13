@@ -3,9 +3,11 @@ const courseData = {
     osce: {
         title: 'OSCE Preparation Course',
         subtitle: 'Objective Structured Clinical Examination Training',
+        heroImage: 'images/courses/osce-hero.jpg',
+        metaDescription: 'OSCE preparation course for nurses. Expert training for Objective Structured Clinical Examination with mock tests and personalized feedback.',
         description: `
             <p>Our OSCE (Objective Structured Clinical Examination) preparation course is designed to help nursing professionals excel in their clinical assessment examinations. This comprehensive program covers all aspects of clinical skills evaluation, patient interaction, and practical nursing competencies required for international nursing practice.</p>
-            <p>With experienced instructors who have international nursing backgrounds, you'll receive hands-on training with realistic clinical scenarios, Personalised APP for easy learning, standardized patient interactions, and detailed feedback to enhance your performance.</p>
+            <p>With experienced instructors who have international nursing backgrounds, you'll receive hands-on training with realistic clinical scenarios, standardized patient interactions, and detailed feedback to enhance your performance.</p>
         `,
         learningOutcomes: [
             'Master clinical assessment techniques and procedures',
@@ -14,16 +16,15 @@ const courseData = {
             'Learn proper documentation and reporting protocols',
             'Understand cultural competency in healthcare settings',
             'Build confidence for exam day through mock examinations',
-            'Receive personalized feedback from expert assessors',
-            'Personalised App & 24x7 simulation lab access'
+            'Receive personalized feedback from expert assessors'
         ],
         targetAudience: `
-            <p>This course is ideal for registered nurses planning to practice in countries like the UK, Australia, New Zealand, or other nations that require OSCE assessment. Whether you're an experienced nurse looking to work internationally, this program will prepare you for success.</p>
+            <p>This course is ideal for registered nurses planning to practice in countries like the UK, Australia, New Zealand, or other nations that require OSCE assessment. Whether you're a new graduate or an experienced nurse looking to work internationally, this program will prepare you for success.</p>
         `,
-        duration: '2 Week',
-        students: '3000+',
+        duration: '3-6 Months',
+        students: '300+',
         successRate: '96%',
-        price: '₹40,000',
+        price: '₹45,000',
         modules: [
             {
                 number: 1,
@@ -41,7 +42,7 @@ const courseData = {
                 topics: [
                     'Therapeutic communication',
                     'Patient education',
-                    'App access',
+                    'Breaking bad news',
                     'Cultural sensitivity'
                 ]
             },
@@ -70,6 +71,8 @@ const courseData = {
     oet: {
         title: 'OET Training Program',
         subtitle: 'Occupational English Test for Healthcare Professionals',
+        heroImage: 'images/courses/oet-hero.jpg',
+        metaDescription: 'OET training for healthcare professionals. Comprehensive Occupational English Test preparation with expert instructors and proven methodologies.',
         description: `
             <p>The Occupational English Test (OET) is specifically designed for healthcare professionals who wish to practice in English-speaking environments. Our comprehensive OET training program focuses on all four language skills - Reading, Writing, Listening, and Speaking - with a healthcare context.</p>
             <p>Our experienced trainers use proven methodologies to help you achieve the required grade for registration with healthcare regulatory bodies in countries like the UK, Australia, New Zealand, Dubai, and Singapore.</p>
@@ -136,6 +139,8 @@ const courseData = {
     iqn: {
         title: 'IQN Certification Program',
         subtitle: 'International Qualification Network',
+        heroImage: 'images/courses/iqn-hero.jpg',
+        metaDescription: 'IQN certification program for international nursing qualifications. Complete support from documentation to registration.',
         description: `
             <p>The International Qualification Network (IQN) program is designed to help nursing professionals obtain international recognition of their qualifications. This comprehensive program prepares you for the assessment processes required by various international healthcare regulatory bodies.</p>
             <p>Our expert team guides you through the entire process, from documentation to skill assessment, ensuring you meet all requirements for international nursing practice.</p>
@@ -202,6 +207,8 @@ const courseData = {
     prometric: {
         title: 'Prometric Exam Preparation',
         subtitle: 'Professional Nursing License Examination',
+        heroImage: 'images/courses/prometric-hero.jpg',
+        metaDescription: 'Prometric exam preparation for nursing licensure. Comprehensive training with extensive question banks and practice tests.',
         description: `
             <p>The Prometric examination is a computer-based test required for nursing licensure in many countries, particularly in the Middle East. Our comprehensive preparation course covers all aspects of nursing knowledge and practice required to pass this challenging examination.</p>
             <p>With extensive question banks, practice tests, and expert instruction, we ensure you're thoroughly prepared for every topic covered in the Prometric exam.</p>
@@ -268,6 +275,8 @@ const courseData = {
     therapeutic: {
         title: 'Therapeutic Communication Course',
         subtitle: 'Professional Communication Skills for Healthcare',
+        heroImage: 'images/courses/therapeutic-hero.jpg',
+        metaDescription: 'Therapeutic communication course for healthcare professionals. Master effective patient communication and interpersonal skills.',
         description: `
             <p>Our Therapeutic Communication course is designed to help healthcare professionals develop effective communication skills essential for patient care. This comprehensive program covers verbal and non-verbal communication techniques, active listening, empathy, and building therapeutic relationships with patients.</p>
             <p>With experienced instructors and practical scenarios, you'll learn how to communicate effectively in various healthcare settings, handle difficult conversations, and provide patient-centered care.</p>
@@ -334,6 +343,8 @@ const courseData = {
     interview: {
         title: 'Interview Preparation & Job Training',
         subtitle: 'Professional Interview Skills for Nursing Careers',
+        heroImage: 'images/courses/interview-hero.jpg',
+        metaDescription: 'Interview preparation and job training for nurses. Master interview skills, professional presentation, and job search strategies.',
         description: `
             <p>Our Interview Preparation and Job Training course prepares nurses for successful job interviews in international healthcare settings. This comprehensive program covers interview techniques, professional presentation, common interview questions, and strategies to showcase your skills and experience effectively.</p>
             <p>With mock interviews, personalized feedback, and expert guidance, you'll gain the confidence and skills needed to excel in nursing job interviews and secure your dream position.</p>
@@ -415,8 +426,23 @@ function loadCourseData() {
         return;
     }
     
-    // Update page title and meta
+    // Update page title and meta description
     document.title = `${course.title} - Mindtree Nursing Solutions`;
+    document.getElementById('page-title').textContent = `${course.title} - Mindtree Nursing Solutions`;
+    
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.setAttribute('content', course.metaDescription);
+    }
+    
+    // Update hero background image if element exists
+    const courseHero = document.querySelector('.course-hero');
+    if (courseHero && course.heroImage) {
+        courseHero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${course.heroImage}')`;
+        courseHero.style.backgroundSize = 'cover';
+        courseHero.style.backgroundPosition = 'center';
+    }
     
     // Update hero section
     document.getElementById('course-title').textContent = course.title;
