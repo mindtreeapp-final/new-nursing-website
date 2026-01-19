@@ -1026,7 +1026,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 890px) {
     .mobile-menu-icon {
         display: block;
         z-index: 1001;
