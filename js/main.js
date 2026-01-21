@@ -16,10 +16,10 @@ function nextTextSlide() {
     if (carouselTexts.length > 0) {
         // Remove active from current
         carouselTexts[currentTextSlide].classList.remove('active');
-        
+
         // Move to next
         currentTextSlide = (currentTextSlide + 1) % carouselTexts.length;
-        
+
         // Add active to next after a small delay
         setTimeout(() => {
             carouselTexts[currentTextSlide].classList.add('active');
@@ -52,7 +52,7 @@ function updateActiveService() {
             card.classList.add('active');
         }
     });
-    
+
     carouselDots.forEach((dot, index) => {
         dot.classList.remove('active');
         if (index === currentServiceIndex) {
@@ -97,13 +97,13 @@ if (servicesTrack) {
         const cardWidth = serviceCards[0]?.offsetWidth || 0;
         const gap = 40;
         const newIndex = Math.round(scrollPosition / (cardWidth + gap));
-        
+
         if (newIndex !== currentServiceIndex && newIndex < serviceCards.length) {
             currentServiceIndex = newIndex;
             updateActiveService();
         }
     });
-    
+
     // Handle dot clicks
     carouselDots.forEach((dot) => {
         dot.addEventListener('click', () => {
@@ -111,7 +111,7 @@ if (servicesTrack) {
             scrollToService(index);
         });
     });
-    
+
     // Handle card clicks for mobile
     serviceCards.forEach((card) => {
         card.addEventListener('click', () => {
@@ -185,7 +185,7 @@ if (contactBtn) {
 // Close modals
 if (closeBtns.length > 0) {
     Array.from(closeBtns).forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             this.parentElement.parentElement.style.display = 'none';
         });
     });
@@ -201,7 +201,7 @@ window.addEventListener('click', (e) => {
 // Course Card Click Handler
 const courseCards = document.querySelectorAll('.course-card');
 courseCards.forEach(card => {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function () {
         const course = this.getAttribute('data-course');
         window.location.href = `course-detail.html?course=${course}`;
     });
@@ -261,12 +261,12 @@ function addMessage(message, isBot = true) {
 
 function getBotResponse(userMessage) {
     const message = userMessage.toLowerCase();
-    
+
     // Check for greetings
     if (chatbotKnowledge.greetings.some(greeting => message.includes(greeting))) {
         return chatbotResponses.greeting;
     }
-    
+
     // Check for course queries
     if (message.includes('osce')) {
         return chatbotResponses.osce;
@@ -283,27 +283,27 @@ function getBotResponse(userMessage) {
     if (chatbotKnowledge.courses.some(keyword => message.includes(keyword))) {
         return chatbotResponses.courses;
     }
-    
+
     // Check for pricing
     if (chatbotKnowledge.pricing.some(keyword => message.includes(keyword))) {
         return chatbotResponses.pricing;
     }
-    
+
     // Check for contact
     if (chatbotKnowledge.contact.some(keyword => message.includes(keyword))) {
         return chatbotResponses.contact;
     }
-    
+
     // Check for duration
     if (chatbotKnowledge.duration.some(keyword => message.includes(keyword))) {
         return chatbotResponses.duration;
     }
-    
+
     // Check for enrollment
     if (chatbotKnowledge.enrollment.some(keyword => message.includes(keyword))) {
         return chatbotResponses.enrollment;
     }
-    
+
     // Default response
     return chatbotResponses.default;
 }
@@ -311,11 +311,11 @@ function getBotResponse(userMessage) {
 function sendMessage() {
     const message = chatInput.value.trim();
     if (message === '') return;
-    
+
     // Add user message
     addMessage(message, false);
     chatInput.value = '';
-    
+
     // Simulate typing delay
     setTimeout(() => {
         const response = getBotResponse(message);
@@ -337,7 +337,7 @@ if (chatInput) {
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -371,5 +371,50 @@ document.querySelectorAll('.course-card, .offer-card, .category-card, .service-c
     el.style.transition = 'all 0.6s ease';
     observer.observe(el);
 });
+
+// Gallery Lightbox Functionality
+const lightbox = document.getElementById('image-lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('caption');
+const galleryItems = document.querySelectorAll('.photo-item');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+if (lightbox) {
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const img = this.querySelector('img');
+            lightbox.style.display = "flex";
+            lightbox.style.alignItems = "center"; // Center vertically
+            lightbox.style.justifyContent = "center"; // Center horizontally
+            lightboxImg.src = img.src;
+            lightboxCaption.innerHTML = img.alt;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    // Close functionality
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', function () {
+            lightbox.style.display = "none";
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+    }
+
+    // Close when clicking outside image
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape" && lightbox.style.display === "flex") {
+            lightbox.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
 
 console.log('Mindtree Nursing Solutions - Website Loaded Successfully');

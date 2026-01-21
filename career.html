@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Mindtree Nursing Solutions Careers and Latest News. Stay updated with the latest opportunities and announcements.">
+
+    <title>Career & News - Mindtree Nursing Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .career-hero {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .career-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .career-content {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .news-date {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 5px 15px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 20px 0 0 20px;
+            border-radius: 4px;
+        }
+
+        .news-body {
+            padding: 20px 25px 30px;
+        }
+
+        .news-body h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .news-body p {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more-btn {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            gap: 10px;
+        }
+
+        .job-application-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .btn-apply {
+            display: inline-block;
+            background: var(--gradient-secondary);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .btn-apply:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Mindtree Nursing Solutions" id="company-logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">
+                            Courses <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="course-detail.html?course=oet">OET</a>
+                            <a href="course-detail.html?course=iqn">IQN</a>
+                            <a href="course-detail.html?course=osce">OSCE</a>
+                            <a href="course-detail.html?course=therapeutic">Therapeutic Communication</a>
+                            <a href="course-detail.html?course=interview">Interview Assistance</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">
+                            App <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://apps.apple.com/in/app/mindtree-academy/id6753161418" target="_blank">
+                                <i class="fab fa-apple"></i> iOS App
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.mindtree.learning"
+                                target="_blank">
+                                <i class="fab fa-google-play"></i> Android App
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="career.html" class="active">CAREER</a></li>
+                    <li><a href="#" id="contact-btn">Contact Us</a></li>
+                    <li><a href="https://zfrmz.in/ItEIDou3OnZligiR3iki" target="_blank" class="btn-primary">Book Now</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Career/News Hero -->
+    <section class="career-hero">
+        <div class="container">
+            <h1>Career & Latest News</h1>
+            <p>Stay updated with Mindtree Nursing Solutions</p>
+        </div>
+    </section>
+
+    <!-- News Content -->
+    <section class="career-content">
+        <div class="container">
+            <h2 class="section-title">Latest Updates</h2>
+
+            <div class="news-grid">
+                <!-- News Item 1 -->
+                <div class="news-card">
+                    <span class="news-date">Jan 18, 2026</span>
+                    <div class="news-body">
+                        <h3>New OSCE Batch Starting</h3>
+                        <p>We are excited to announce the commencement of our new OSCE training batch. Limited seats
+                            available for the upcoming session.</p>
+                        <a href="#" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-card">
+                    <span class="news-date">Jan 10, 2026</span>
+                    <div class="news-body">
+                        <h3>Recruitment Drive for UK</h3>
+                        <p>Mindtree is partnering with top NHS trusts for a major recruitment drive. Registered nurses
+                            with OET/IELTS can apply now.</p>
+                        <a href="#" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-card">
+                    <span class="news-date">Dec 28, 2025</span>
+                    <div class="news-body">
+                        <h3>Success Story: 50+ Placements</h3>
+                        <p>We celebrated a milestone of placing over 50 nurses in New Zealand healthcare facilities this
+                            month alone.</p>
+                        <a href="#" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="job-application-section">
+        <div class="container">
+            <h2>Want to Join Our Team?</h2>
+            <p style="margin-bottom: 30px; font-size: 18px; color: var(--text-light);">We are always looking for
+                talented instructors and support staff.</p>
+            <a href="mailto:info@mindtreenursing.com" class="btn-apply">Send Your CV</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mindtree Nursing Solutions</h3>
+                    <p>Empowering nurses worldwide with quality education and training.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="career.html">Careers</a></li>
+                        <li><a href="#" id="terms-link">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>New Zealand</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 30/167 Whitney Street, Blockhouse Bay, Auckland, 0600</p>
+                    <p><i class="fas fa-phone"></i> +64 21 217 8770</p>
+                </div>
+                <div class="footer-section">
+                    <h3>India</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Olivet, M.C. Road, Panavely, Kottarakkara, Kollam, Kerala
+                        691532</p>
+                    <p><i class="fas fa-phone"></i> +91 9778 286 707</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindtree Nursing Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

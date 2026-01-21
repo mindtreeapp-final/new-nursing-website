@@ -93,7 +93,7 @@
 
 /* Individual Course Hero Backgrounds */
 .oet-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/courses/oet-hero.jpg');
+    background-image: linear-gradient(rgba(43, 146, 241, 0.6), rgba(21, 118, 245, 0.6)), url('images/banner/banner4.jpg');
 }
 
 .iqn-hero {
@@ -323,7 +323,8 @@
 .video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 177.78%; /* 9:16 aspect ratio for YouTube Shorts */
+    padding-bottom: 177.78%;
+    /* 9:16 aspect ratio for YouTube Shorts */
     height: 0;
     overflow: hidden;
     border-radius: 15px;
@@ -420,15 +421,16 @@
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 1024px) {
+
     .reviews-carousel,
     .videos-carousel {
         padding: 0 60px;
     }
-    
+
     .carousel-arrow-left {
         left: 10px;
     }
-    
+
     .carousel-arrow-right {
         right: 10px;
     }
@@ -439,81 +441,81 @@
         padding: 80px 0 60px;
         min-height: 400px;
     }
-    
+
     .hero-content h1 {
         font-size: 32px;
     }
-    
+
     .hero-subtitle {
         font-size: 18px;
     }
-    
+
     .hero-stats {
         gap: 15px;
     }
-    
+
     .stat-item {
         padding: 10px 20px;
         font-size: 14px;
     }
-    
+
     .course-content {
         padding: 50px 0;
     }
-    
+
     .course-content h2 {
         font-size: 28px;
     }
-    
+
     .course-content h3 {
         font-size: 22px;
     }
-    
+
     .section-title {
         font-size: 28px;
         margin-bottom: 30px;
     }
-    
+
     .reviews-carousel,
     .videos-carousel {
         padding: 0 50px;
     }
-    
+
     .review-card {
         flex: 0 0 calc(90vw - 20px);
         min-width: calc(90vw - 20px);
         padding: 20px;
     }
-    
+
     .video-card {
         flex: 0 0 240px;
         min-width: 240px;
     }
-    
+
     .carousel-arrow {
         width: 40px;
         height: 40px;
         font-size: 16px;
     }
-    
+
     .carousel-arrow-left {
         left: 5px;
     }
-    
+
     .carousel-arrow-right {
         right: 5px;
     }
-    
+
     .carousel-dots {
         margin-top: 20px;
         gap: 8px;
     }
-    
+
     .carousel-dot {
         width: 8px;
         height: 8px;
     }
-    
+
     .carousel-dot.active {
         width: 20px;
     }
@@ -524,122 +526,122 @@
         padding: 60px 0 40px;
         min-height: 300px;
     }
-    
+
     .hero-content h1 {
         font-size: 24px;
         margin-bottom: 10px;
     }
-    
+
     .hero-subtitle {
         font-size: 14px;
         margin-bottom: 20px;
     }
-    
+
     .hero-stats {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .stat-item {
         padding: 10px 15px;
         font-size: 12px;
     }
-    
+
     .stat-item i {
         font-size: 18px;
     }
-    
+
     .btn-enroll-hero {
         padding: 12px 30px;
         font-size: 16px;
     }
-    
+
     .course-content {
         padding: 30px 0;
     }
-    
+
     .course-content h2 {
         font-size: 22px;
     }
-    
+
     .course-content h3 {
         font-size: 18px;
         margin-top: 25px;
     }
-    
+
     .section-title {
         font-size: 22px;
         margin-bottom: 20px;
     }
-    
+
     .reviews-carousel,
     .videos-carousel {
         padding: 0 30px;
     }
-    
+
     .review-card {
         flex: 0 0 calc(95vw - 40px);
         min-width: calc(95vw - 40px);
         padding: 15px;
     }
-    
+
     .review-header {
         gap: 10px;
         margin-bottom: 10px;
     }
-    
+
     .review-avatar {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
-    
+
     .review-info h4 {
         font-size: 16px;
     }
-    
+
     .review-info p {
         font-size: 13px;
     }
-    
+
     .review-text {
         font-size: 13px;
         line-height: 1.6;
     }
-    
+
     .rating {
         font-size: 14px;
     }
-    
+
     .video-card {
         flex: 0 0 calc(85vw - 20px);
         min-width: calc(85vw - 20px);
     }
-    
+
     .carousel-arrow {
         width: 35px;
         height: 35px;
         font-size: 14px;
     }
-    
+
     .carousel-arrow-left {
         left: 0;
     }
-    
+
     .carousel-arrow-right {
         right: 0;
     }
-    
+
     .carousel-dots {
         margin-top: 15px;
         gap: 6px;
     }
-    
+
     .carousel-dot {
         width: 6px;
         height: 6px;
     }
-    
+
     .carousel-dot.active {
         width: 18px;
     }
