@@ -21,6 +21,15 @@
     z-index: 1;
 }
 
+.hero-plain {
+    background-color: var(--primary-color) !important;
+    background-image: var(--gradient-primary) !important;
+}
+
+.hero-plain::before {
+    display: none;
+}
+
 .course-hero .container {
     position: relative;
     z-index: 2;
@@ -42,6 +51,7 @@
     font-size: 24px;
     margin-bottom: 30px;
     opacity: 0.9;
+    color: var(--white);
 }
 
 .hero-stats {
@@ -56,7 +66,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(38, 149, 240, 0.1);
     padding: 15px 25px;
     border-radius: 30px;
     backdrop-filter: blur(10px);

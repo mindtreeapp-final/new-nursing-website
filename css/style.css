@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-color: #2563eb;
     --secondary-color: #10b981;
@@ -129,6 +133,7 @@ body {
     padding: 10px 25px !important;
     border-radius: 25px;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -187,11 +192,11 @@ body {
 .google-review-badge {
     display: inline-flex;
     text-decoration: none;
-    background: #0ea0f5;
+    background: #5c6f7a;
     /* Dark background similar to image */
     padding: 12px 16px;
     border-radius: 8px;
-    border: 1px solid #333;
+    border: 1px solid #5c6f7a;
     margin-bottom: 30px;
     margin-top: 30px;
     /* Added spacing from stats */
@@ -300,10 +305,15 @@ body {
 }
 
 .stat-item-new h3 {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text-dark);
+    font-size: 42px;
+    /* significantly bigger */
+    font-weight: 800;
     margin-bottom: 5px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .stat-item-new p {

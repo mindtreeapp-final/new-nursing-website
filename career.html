@@ -130,11 +130,11 @@
                             Courses <i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-content">
-                            <a href="course-detail.html?course=oet">OET</a>
-                            <a href="course-detail.html?course=iqn">IQN</a>
-                            <a href="course-detail.html?course=osce">OSCE</a>
-                            <a href="course-detail.html?course=therapeutic">Therapeutic Communication</a>
-                            <a href="course-detail.html?course=interview">Interview Assistance</a>
+                            <a href="oet.html">OET</a>
+                            <a href="iqn.html">IQN</a>
+                            <a href="osce.html">OSCE</a>
+                            <a href="therapeutic.html">Therapeutic Communication</a>
+                            <a href="interview.html">Interview Assistance</a>
                         </div>
                     </li>
                     <li><a href="about.html">About Us</a></li>
@@ -152,7 +152,7 @@
                             </a>
                         </div>
                     </li>
-                    <li><a href="career.html" class="active">CAREER</a></li>
+                    <li><a href="career.html" class="active">Career</a></li>
                     <li><a href="#" id="contact-btn">Contact Us</a></li>
                     <li><a href="https://zfrmz.in/ItEIDou3OnZligiR3iki" target="_blank" class="btn-primary">Book Now</a>
                     </li>
@@ -224,6 +224,82 @@
         </div>
     </section>
 
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p>India Office</p>
+                        <a href="tel:+919778286707" class="phone-number">+91 9778 286 707</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p>New Zealand Office</p>
+                        <a href="tel:+6421217870" class="phone-number">+64 21 217 8770</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <p>WhatsApp</p>
+                        <a href="https://wa.me/919778286707" target="_blank" class="phone-number">+91 9778 286 707</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <p>Email us at</p>
+                        <a href="mailto:info@mindtreenursing.com">info@mindtreenursing.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="image-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Fixed Action Buttons -->
+    <div class="fixed-actions">
+        <div class="whatsapp-btn-wrapper">
+            <a href="https://wa.me/919778286707" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <div class="notification-badge">!</div>
+        </div>
+        <button class="chatbot-btn" id="chatbot-trigger" title="Chat with us">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <h3>Mindtree Assistant</h3>
+            <button class="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="bot-message">
+                <p>Hello! I'm here to help you with any questions about our nursing courses. How can I assist you today?
+                </p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your question...">
+            <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -237,7 +313,9 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="career.html">Careers</a></li>
+                        <li><a href="oet.html">OET</a></li>
+                        <li><a href="iqn.html">IQN</a></li>
+                        <li><a href="osce.html">OSCE</a></li>
                         <li><a href="#" id="terms-link">Terms & Conditions</a></li>
                     </ul>
                 </div>
@@ -245,13 +323,39 @@
                     <h3>New Zealand</h3>
                     <p><i class="fas fa-map-marker-alt"></i> 30/167 Whitney Street, Blockhouse Bay, Auckland, 0600</p>
                     <p><i class="fas fa-phone"></i> +64 21 217 8770</p>
+                    <p style="margin-top: 15px;"><i class="fas fa-map-marker-alt"></i> 110 Sir John McKenzie Avenue,
+                        Christchurch</p>
+                    <p><i class="fas fa-phone"></i> +64 22 123 0023</p>
                 </div>
                 <div class="footer-section">
-                    <h3>India</h3>
+                    <h3>Australia</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 22/2 Antis Street, Canberra, ACT</p>
+                    <p><i class="fas fa-phone"></i> +61 493 669 557</p>
+
+                    <h3 style="margin-top: 20px;">India</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Olivet, M.C. Road, Panavely, Kottarakkara, Kollam, Kerala
                         691532</p>
                     <p><i class="fas fa-phone"></i> +91 9778 286 707</p>
                 </div>
+
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/mindtreenursingsolutions?igsh=MWtibTF5YXN5dGR6MQ=="
+                            target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/MindtreeNursingSolutions" target="_blank"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://youtube.com/@mindtreenursingsolutions5958?si=DWMz54Ycm_CEb_s2" target="_blank"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Mindtree Nursing Solutions. All rights reserved.</p>
