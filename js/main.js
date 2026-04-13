@@ -417,4 +417,44 @@ if (lightbox) {
     });
 }
 
+
+// Registration Popup Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const registrationModal = document.getElementById('registration-modal');
+    const registrationClose = document.querySelector('.registration-close');
+
+    if (registrationModal) {
+        // Show modal after 2 seconds
+        setTimeout(() => {
+            registrationModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        }, 2000);
+
+        // Close modal function
+        const closeModal = () => {
+            registrationModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scroll
+        };
+
+        // Click close button
+        if (registrationClose) {
+            registrationClose.addEventListener('click', closeModal);
+        }
+
+        // Click outside modal
+        window.addEventListener('click', (e) => {
+            if (e.target === registrationModal) {
+                closeModal();
+            }
+        });
+
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && registrationModal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    }
+});
+
 console.log('Mindtree Nursing Solutions - Website Loaded Successfully');
