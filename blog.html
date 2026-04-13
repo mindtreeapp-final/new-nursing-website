@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-532PQV5D');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-532PQV5D');</script>
     <!-- End Google Tag Manager -->
 
     <!-- SEO Meta Tags -->
@@ -57,6 +60,16 @@
             overflow: hidden;
             box-shadow: var(--shadow-md);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Blog thumbnail styling */
+        .blog-thumb {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 15px;
         }
 
         .news-card:hover {
@@ -207,10 +220,10 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-532PQV5D"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-532PQV5D" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-     
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
@@ -275,26 +288,22 @@
             <div class="news-grid">
                 <!-- TruMerit Featured Blog -->
                 <div class="news-card trumerit-featured-card">
-                    <div class="featured-badge">
-                        <i class="fas fa-star"></i> Featured
-                    </div>
-                    <span class="news-date">Apr 8, 2026</span>
+                    <img src="images\mainpage\cgfns.jpg" alt="Blog Image"
+                        class="blog-thumb" />
                     <div class="news-body">
-                        <div class="blog-category-tag">Credential Verification</div>
                         <h3>Introduction to TruMerit (Formerly CGFNS): Your Gateway to Nursing in New Zealand</h3>
-                        <p>If you are an internationally qualified nurse dreaming of building your career in New Zealand, understanding the credential verification process is your first and most important step. TruMerit (formerly known as CGFNS – Commission on Graduates of Foreign Nursing Schools) is a globally recognized organization based in the United States that provides credential verification services for healthcare professionals. In 2025, CGFNS rebranded to TruMerit to expand its support beyond nursing and serve a wider range of healthcare professions worldwide.</p>
-                        <a href="trumerit-for-newzealand-nursing-registration.html" class="read-more-btn trumerit-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        <a href="trumerit-for-newzealand-nursing-registration.html"
+                            class="read-more-btn trumerit-read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- ICHC Blog -->
                 <div class="news-card">
-                    <span class="news-date">Apr 8, 2026</span>
+                    <img src="images\mainpage\ichc.jpg" alt="Blog Image"
+                        class="blog-thumb" />
                     <div class="news-body">
-                        <div class="blog-category-tag">Background Verification</div>
                         <h3>ICHC (International Criminal History Check): A Detailed Guide</h3>
-                        <p>When applying for international professional registration, especially for New Zealand (APC), background verification is a crucial requirement. One of the most important steps in this process is the International Criminal History Check (ICHC). Verify your background from countries where you have stayed for more than one year during the last seven years through the secure Fit2Work portal.</p>
-                        <a href="ichc-blog.html" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        <a href="ichc-blog.html" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -309,7 +318,8 @@
                 <h2>Nursing Job Opportunities in Australia & New Zealand</h2>
                 <p>Don't miss our comprehensive session on migration pathways, registration guidance, and live interview
                     preparation. Build your international career today!</p>
-                <a href="premium-landing.html" class="btn-webinar">Reserve Your Free Seat Now <i class="fas fa-external-link-alt" style="margin-left: 10px; font-size: 14px;"></i></a>
+                <a href="premium-landing.html" class="btn-webinar">Reserve Your Free Seat Now <i
+                        class="fas fa-external-link-alt" style="margin-left: 10px; font-size: 14px;"></i></a>
             </div>
         </div>
     </section>

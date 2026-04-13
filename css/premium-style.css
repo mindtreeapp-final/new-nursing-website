@@ -63,7 +63,7 @@ nav {
 }
 
 .logo img {
-    height: 45px;
+    height: 65px;
 }
 
 .nav-links {
@@ -344,5 +344,5 @@ nav {
     .form-grid { grid-template-columns: 1fr; }
     .hero-text h1 { font-size: 36px; }
     .navbar { height: 70px; }
-    .logo img { height: 35px; }
+    .logo img { height: 50px; }
 }

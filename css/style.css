@@ -57,7 +57,7 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -134,11 +134,31 @@ body {
     border-radius: 25px;
     font-weight: 600;
     text-decoration: none;
+    display: inline-block;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 30px;
 }
 
 .mobile-menu-icon {
