@@ -232,8 +232,8 @@ const chatbotResponses = {
     oet: "The OET course focuses on English language proficiency for healthcare professionals:\n- Reading & Writing modules\n- Listening skills\n- Speaking practice\n- Medical terminology\n\nInterested in enrolling?",
     iqn: "Our IQN program prepares you for international nursing qualifications with comprehensive training and support.",
     prometric: "The Prometric exam preparation includes:\n- Comprehensive review materials\n- Practice tests\n- Exam strategies\n- Study guides\n\nShall I help you get started?",
-    pricing: "For detailed pricing information, please contact us at 1800-120-456-456 or fill out the Free Book form to speak with our admissions team.",
-    contact: "You can reach us at:\n📞 Phone: 1800-120-456-456\n📧 Email: info@mindtreenursing.com\n💬 WhatsApp: Click the WhatsApp button below\n\nOur team is available Monday-Saturday, 9 AM - 6 PM.",
+    pricing: "For detailed pricing information, please contact us at +919778286707 or fill out the Free Book form to speak with our admissions team.",
+    contact: "You can reach us at:\n📞 Phone: +919778286707\n📧 Email: info@mindtreenursing.com\n💬 WhatsApp: https://wa.me/message/SC5OMJS2WSOQH1\n\nOur team is available Monday-Saturday, 9 AM - 6 PM.",
     duration: "Course durations vary:\n- OSCE: 3-6 months\n- OET: 2-4 months\n- IQN: 4-8 months\n- Prometric: 3-6 months\n\nWe also offer flexible scheduling to fit your needs.",
     enrollment: "To enroll in any course:\n1. Click the 'Enroll Now' or 'Free Book' button\n2. Fill out the form with your details\n3. Our team will contact you within 24 hours\n4. Complete the admission process\n\nWould you like me to open the enrollment form?",
     default: "I'm here to help! I can assist you with:\n- Course information\n- Pricing details\n- Enrollment process\n- Contact information\n\nWhat would you like to know?"
