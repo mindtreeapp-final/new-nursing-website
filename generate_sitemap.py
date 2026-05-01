@@ -16,9 +16,8 @@ for file in html_files + blog_files:
     elif url_path == 'blog/index.html':
         url = base_url + "blog"
     else:
-        # Strip .html for the clean URL
-        clean_name = url_path.replace('.html', '')
-        url = base_url + clean_name
+        # Keep .html for the URL
+        url = base_url + url_path
         
     sitemap += f"  <url>\n    <loc>{url}</loc>\n  </url>\n"
 
